@@ -34,13 +34,15 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">
-                            <!-- Consider creating a small logo from the paper's figures -->
+                        <!-- <h1 class="title is-1 publication-title">
                             <img src="static/images/logo.png" style="width:1.5em;vertical-align: middle">
                             <span>DocLens</span>
+                        </h1> -->
+                        <h1 class="subtitle is-3 publication-title">
+                            <img src="static/images/logo.png" style="width:1.5em;vertical-align: middle">
+                            <b>DocLens:</b> A Tool-Augmented Multi-Agent
+                            Framework for Long Visual Document Understanding
                         </h1>
-                        <h2 class="subtitle is-3 publication-title">A Tool-Augmented Multi-Agent Framework for Long
-                            Visual Document Understanding</h2>
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
                                 <a href="https://scholar.google.com/citations?user=oD2HPaYAAAAJ&hl=en"
@@ -72,7 +74,7 @@
 
                         <div class="is-size-5 publication-authors">
                             <span class="author-block"><sup>1</sup>School of Computer Science, Peking
-                                University</span>&nbsp;&nbsp;&nbsp;
+                                University</span>&nbsp;&nbsp;&nbsp; <br>
                             <span class="author-block"><sup>2</sup>Google Cloud AI Research</span>
                         </div>
 
@@ -98,28 +100,6 @@
                                         <span>arXiv</span>
                                     </a>
                                 </span>
-                                <!-- Code Link. -->
-                                <!--
-                                <span class="link-block">
-                                    <a href="https://github.com/your_repo/DocLens" target="_blank"
-                                        class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="fab fa-github"></i>
-                                        </span>
-                                        <span>Code</span>
-                                    </a>
-                                </span>
-                                -->
-                                <!-- Dataset Link. (Optional) -->
-                                <!-- <span class="link-block">
-                <a href="https://huggingface.co/datasets/your_dataset" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <p style="font-size:18px">🤗</p>
-                  </span>
-                  <span>Dataset</span>
-                </a>
-              </span> -->
                             </div>
 
                         </div>
@@ -162,8 +142,12 @@
                             Localizer Agent) within these pages. We then use a <b>Reasoning Module</b> to perform
                             in-depth analysis of these elements, provide candidate answers (Answer Sampler Agent), and
                             pick the most accurate and reliable one (Adjudicator Agent). Paired with Gemini-2.5-Pro,
-                            DocLens achieves state-of-the-art performance on <b>MMLongBench-Doc</b> and
-                            <b>FinRAGBench-V</b>, surpassing even human experts. The framework's superiority is
+                            DocLens achieves state-of-the-art performance on <b><a
+                                    href="https://mayubo2333.github.io/MMLongBench-Doc/"
+                                    style="color: #485fc7;">MMLongBench-Doc</a></b> and
+                            <b><a href="https://github.com/zhaosuifeng/FinRAGBench-V"
+                                    style="color: #485fc7;">FinRAGBench-V</a></b>, surpassing
+                            even human experts. The framework's superiority is
                             particularly evident on <b>vision-centric</b> and <b>unanswerable</b> queries, demonstrating
                             the power of its enhanced localization capabilities.
                         </p>
@@ -173,6 +157,24 @@
 
         </div>
     </section>
+
+    <section class="section hero teaser">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <video controls>
+                            <source src="static/images/DocLensDemoVideo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
 
 
     <section class="section">
