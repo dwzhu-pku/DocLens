@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="DocLENS: A Tool-Augmented Multi-Agent Framework for Long Visual Document Understanding">
+    <meta name="keywords"
+        content="DocLENS, VLM, Document Understanding, Multi-Agent, Tool-Augmented, MMLongBench-Doc, FinRAGBench-V, Gemini">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DocLENS: A Tool-Augmented Multi-Agent Framework for Long Visual Document Understanding</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <link rel="icon" href="./static/images/logo.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">
+                            <!-- Consider creating a small logo from the paper's figures -->
+                            <img src="static/images/logo.png" style="width:1.5em;vertical-align: middle">
+                            <span>DocLENS</span>
+                        </h1>
+                        <h2 class="subtitle is-3 publication-title">A Tool-Augmented Multi-Agent Framework for Long
+                            Visual Document Understanding</h2>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=oD2HPaYAAAAJ&hl=en"
+                                    target="_blank">Dawei Zhu</a><sup>1,2*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=s6h8L_UAAAAJ&hl=en&oi=ao"
+                                    target="_blank">Rui Meng</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=5mOfQfAAAAAJ&hl=en&oi=ao"
+                                    target="_blank">Jiefeng Chen</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=RvBDhSwAAAAJ&hl=en&oi=ao"
+                                    target="_blank">Sujian Li</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=ahSpJOAAAAAJ&hl=en&oi=ao"
+                                    target="_blank">Tomas Pfister</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=kiFd6A8AAAAJ&hl=en&oi=ao"
+                                    target="_blank">Jinsung Yoon</a><sup>2</sup>
+                            </span>
+                        </div>
+
+                        <br>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>School of Computer Science, Peking
+                                University</span>&nbsp;&nbsp;&nbsp;
+                            <span class="author-block"><sup>2</sup>Google Cloud AI Research</span>
+                        </div>
+
+                        <br>
+
+                        <div class="is-size-5 thanks">
+                            <span class="author-block">Corresponding author(s):</span>
+                            <span class="author-block"><a
+                                    href="mailto:lisujian@pku.edu.cn">lisujian@pku.edu.cn</a>,</span>
+                            <span class="author-block"><a
+                                    href="mailto:jinsungyoon@google.com">jinsungyoon@google.com</a></span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <!-- Replace with your actual arXiv link -->
+                                    <a href="https://arxiv.org/abs/your_paper_id" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <!--
+                                <span class="link-block">
+                                    <a href="https://github.com/your_repo/DocLENS" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                -->
+                                <!-- Dataset Link. (Optional) -->
+                                <!-- <span class="link-block">
+                <a href="https://huggingface.co/datasets/your_dataset" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span> -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="content has-text-centered">
+                <img src="static/images/teaser_figure.png" alt="DocLENS Workflow and Performance Overview"
+                    width="95%" />
+                <p class="is-size-6">
+                    Workflow and performance of our proposed method, DocLens. <b>(a)</b> The workflow grounds
+                    its answer by navigating from the full document to visual elements (e.g., Text, Chart) within
+                    relevant pages. <b>(b)</b> It yields great improvement on MMLongBench-Doc, specifically for
+                    understanding visual elements and reducing hallucination.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <!-- Abstract -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <!-- <h2 class="title is-3">Abstract</h2> -->
+                    <div class="content has-text-justified">
+                        <p>
+                            We introduce <b>DocLens</b>, a tool-augmented multi-agent framework that, for the first
+                            time, achieves <b>superhuman performance</b> in long visual document understanding. DocLens
+                            achieves its remarkable performance by fully leveraging existing document parsing tools and
+                            orchestrating specialized agents. Given a long visual document and a corresponding
+                            question, DocLens first applies a tool-augmented <b>Lens Module</b> to retrieve relevant
+                            pages (Page Navigator Agent) and locate relevant visual and textual elements (Element
+                            Localizer Agent) within these pages. We then use a <b>Reasoning Module</b> to perform
+                            in-depth analysis of these elements, provide candidate answers (Answer Sampler Agent), and
+                            pick the most accurate and reliable one (Adjudicator Agent). Paired with Gemini-2.5-Pro,
+                            DocLens achieves state-of-the-art performance on <b>MMLongBench-Doc</b> and
+                            <b>FinRAGBench-V</b>, surpassing even human experts. The framework's superiority is
+                            particularly evident on <b>vision-centric</b> and <b>unanswerable</b> queries, demonstrating
+                            the power of its enhanced localization capabilities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Method Overview</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We propose DocLENS, a framework consisting of two primary components: a <strong>Lens
+                                Module</strong> and a <strong>Reasoning Module</strong>. Given a long visual document
+                            and a question, the Lens Module first identifies relevant pages and the key visual & textual
+                            elements within them. Subsequently, the Reasoning Module conducts an in-depth analysis of
+                            this extracted evidence to generate a precise answer.
+                        </p>
+                    </div>
+                    <img id="model" width="100%" src="static/images/method_figure.png">
+                    <br>
+                    <div class="content has-text-justified">
+                        <ul>
+                            <li>
+                                <strong>Lens Module</strong>: This module acts like a magnifying glass. It uses a
+                                <em>Page Navigator</em> agent to find the correct pages and an <em>Element
+                                    Localizer</em> agent to zoom in on specific charts, tables, or figures on those
+                                pages.
+                            </li>
+                            <li>
+                                <strong>Reasoning Module</strong>: After the evidence is collected, this module uses a
+                                "sampling-adjudication" mechanism. An <em>Answer Sampler</em> agent proposes several
+                                potential answers, and an <em>Adjudicator</em> agent critically assesses them to select
+                                the most reliable and accurate final answer.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full">
+                    <h2 class="title is-3">Experimental Results</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We evaluate DocLENS on two challenging benchmarks: MMLongBench-Doc and FinRAGBench-V. Our
+                            method achieves substantial performance improvements across all three backbone models
+                            (Gemini-2.5-Pro, Gemini-2.5-Flash, and Claude-4-Sonnet).
+                        </p>
+                    </div>
+                    <!-- Replaced with Table 1 from your paper -->
+                    <img id="model" width="100%" src="static/images/results_table.png">
+                    <div class="content has-text-justified">
+                        We highlight the following findings:
+                        <ul>
+                            <li>
+                                <strong>State-of-the-Art Performance</strong>: DocLENS with Gemini-2.5-Pro achieves a
+                                new state-of-the-art on MMLongBench-Doc (67.6) and FinRAGBench-V (70.4).
+                            </li>
+                            <li>
+                                <strong>Surpassing Human Experts</strong>: On MMLongBench-Doc, our framework (67.6)
+                                surpasses the reported human expert performance of 65.8, demonstrating the effectiveness
+                                of our approach.
+                            </li>
+                            <li>
+                                <strong>Reduced Hallucination</strong>: Our method achieves significant improvements on
+                                the Unanswerable (UNA) subset, with an absolute gain of up to +13.8% for Gemini-2.5-Pro.
+                                This indicates that our framework effectively mitigates model hallucination.
+                            </li>
+                            <li>
+                                <strong>Superior Handling of Visual Evidence</strong>: The performance boost is
+                                primarily driven by our method's superior handling of visual evidence like charts and
+                                tables, where fine-grained element localization becomes increasingly critical.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full">
+                    <h2 class="title is-3">Case Study</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            The following cases from our paper highlight the effectiveness of the Element Localizer in
+                            handling complex visual queries. By first identifying and then cropping these visual
+                            elements for detailed inspection, our Localizer effectively addresses challenges where
+                            vanilla VLMs fail.
+                        </p>
+                    </div>
+                    <!-- Carousel with cases from Figure 5 -->
+                    <div id="results-carousel" class="carousel results-carousel" data-slides-to-scroll="1">
+                        <div class="item">
+                            <img src="static/images/case_study.png" width="90%">
+                            <p class="is-size-6">
+                                <b>Case 1</b>: Identifying a trend from a small bar chart embedded within a dense
+                                newspaper page. <br>
+                                <b>Case 2</b>: Locating a specific line plot, extracting precise
+                                numerical values, and
+                                presenting them in descending order.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code></code></pre>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <!-- Replace with your paper's link -->
+                <a class="icon-link" target="_blank" href="https://arxiv.org/abs/your_paper_id">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                <!-- Replace with your code's link -->
+                <a class="icon-link" href="https://github.com/your_repo/DocLENS" target="_blank" class="external-link"
+                    disabled>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is licensed under a <a rel="license" target="_blank"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                        <p>
+                            This means you are free to borrow the <a target="_blank"
+                                href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+                            we just ask that you link back to this page in the footer.
+                            Please remember to remove the analytics code included in the header of the website which
+                            you do not want on your website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
