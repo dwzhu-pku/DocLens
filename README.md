@@ -12,7 +12,7 @@ Given a long visual document and a corresponding question, DocLens first applies
 ## Quick Start
 ### Clone the Repo
 ```bash
-git clone xxx
+git clone https://github.com/dwzhu-pku/DocLens.git
 cd DocLens
 ```
 ### Installing Environment
