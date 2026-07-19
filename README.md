@@ -121,4 +121,11 @@ This is convenient for development purposes, if one would like to modify the des
 ## Citation
 If you find this repo helpful, please cite our paper as follows:
 ```bibtex
+@inproceedings{zhu2026doclens,
+  title={Doclens: A tool-augmented multi-agent framework for long visual document understanding},
+  author={Zhu, Dawei and Meng, Rui and Chen, Jiefeng and Li, Sujian and Pfister, Tomas and Yoon, Jinsung},
+  booktitle={Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={26804--26829},
+  year={2026}
+}
 ```
